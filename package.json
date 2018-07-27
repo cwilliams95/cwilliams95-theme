@@ -1,0 +1,32 @@
+{
+  "name": "cwilliams95",
+  "version": "1.0.0",
+  "description": "Chris Williams' personal site and WordPress Test Project.",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "gulp-svgmin": "^1.2.4",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-htmlrender": "^0.3.0",
+    "gulp-imagemin": "^3.4.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sass-glob-import": "^0.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-zip": "^4.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Chris Williams",
+  "license": "",
+  "homepage": ""
+}
