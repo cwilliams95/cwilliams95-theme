@@ -1,0 +1,34 @@
+ul.iconlist {
+    list-style: none !important;
+    padding-left: 1em !important;
+    li {
+      list-style: none !important;
+      line-height: 1.3em;
+      @include device(smartphone) {line-height: 2.5rem;}
+      &:before {
+        font-family: $icon_font_family;
+        content: $icon_angle_right;
+        display: inline-block;
+        margin-left: -1.5em;
+        width: 1.5em;
+        color: $brand_primary;
+      }
+    }
+  }
+  ol.iconlist {
+    list-style: none !important;
+    padding-left: 1em !important;
+    li {
+      list-style: none !important;
+      line-height: 1.3em;
+      @include device(smartphone) {line-height: 2.5rem;}
+      &:before {
+        font-family: $icon_font_family;
+        content: $icon_check;
+        display: inline-block;
+        margin-left: -1.5em;
+        width: 1.5em;
+        color: $brand_primary;
+      }
+    }
+  }

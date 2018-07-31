@@ -275,11 +275,23 @@ function cwilliams95_fonts_url() {
 	 * into your own language.
 	 */
 	$libre_franklin = _x( 'on', 'Libre Franklin font: on or off', 'cwilliams95' );
+	$open_sans = _x( 'on', 'Open Sans font: on or off', 'cwilliams95' );
 
 	if ( 'off' !== $libre_franklin ) {
-		$font_families = array();
+		$font_families = array('Libre Franklin:300,300i,400,400i,600,600i,800,800i');
 
-		$font_families[] = 'Libre Franklin:300,300i,400,400i,600,600i,800,800i';
+
+		$query_args = array(
+			'family' => urlencode( implode( '|', $font_families ) ),
+			'subset' => urlencode( 'latin,latin-ext' ),
+		);
+
+		$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+	}
+
+	if ( 'off' !== $open_sans ) {
+		$font_families = array('Open Sans:300,300i,400,400i,600,600i,800,800i');
+
 
 		$query_args = array(
 			'family' => urlencode( implode( '|', $font_families ) ),
@@ -435,7 +447,11 @@ function cwilliams95_scripts() {
 
 	// Theme stylesheet.
 	wp_enqueue_style( 'cwilliams95-style', get_stylesheet_uri() );
-	wp_enqueue_style( 'cwilliams95-custom-style', get_theme_file_uri('/assets/css/.css'), array( 'cwilliams95-style' ), '1.0' );
+	wp_enqueue_style( 'cwilliams95-custom-style', get_stylesheet_directory_uri().'/custom-style.css' );
+
+	// Font Awesome
+	wp_register_script('font-awesome', 'https://use.fontawesome.com/d9b68dc2eb.js');
+	wp_enqueue_script('font-awesome');
 
 	// Load the dark colorscheme.
 	if ( 'dark' === get_theme_mod( 'colorscheme', 'light' ) || is_customize_preview() ) {

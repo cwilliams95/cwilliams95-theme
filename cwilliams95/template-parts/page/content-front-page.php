@@ -27,12 +27,12 @@
 
 	<div class="panel-content">
 		<div class="wrap">
-			<header class="entry-header">
-				<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
+			<!--<header class="entry-header">
+				<?php //the_title( '<h2 class="entry-title">', '</h2>' ); ?>
 
-				<?php cwilliams95_edit_link( get_the_ID() ); ?>
+				<?php //cwilliams95_edit_link( get_the_ID() ); ?>
 
-			</header><!-- .entry-header -->
+			</header> -->
 
 			<div class="entry-content">
 				<?php

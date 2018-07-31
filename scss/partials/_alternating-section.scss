@@ -1,0 +1,46 @@
+#alternating-section {
+  .alt-row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    @include device(smartphone, tablet) {flex-direction: column;}
+    &.reverse {
+      flex-direction: row-reverse !important;
+      @include device(smartphone, tablet) {flex-direction: column !important;}
+    }
+    .alt-img-wrap {
+      width: 40%;
+      height: auto;
+      min-height: 400px;
+      position: relative;
+      overflow: hidden;
+      @include device(smartphone, tablet) {width: 100%;}
+      img {
+        min-width: 100%;
+        min-height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: auto;
+        height: auto;
+        max-width: unset;
+        @include device(laptop, desktop) {
+          width: 100%;
+          min-height: unset;
+        }
+      }
+    }
+    .alt-content-wrap {
+      width: 60%;
+      padding: 50px;
+      @include device(smartphone, tablet) {width: 100%;}
+      strong {
+        color: $brand_primary;
+        font-size: 2.3rem;
+        @include device(tablet) {font-size: 2rem;}
+        @include device(smartphone) {font-size: 1.6rem;}
+      }
+    }
+  }
+}

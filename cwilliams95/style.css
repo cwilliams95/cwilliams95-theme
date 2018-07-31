@@ -52,7 +52,7 @@ Styles based on Normalize v5.0.0 @link https://github.com/necolas/normalize.css
 --------------------------------------------------------------*/
 
 html {
-	font-family: sans-serif;
+	font-family: 'Open Sans';
 	line-height: 1.15;
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
@@ -95,7 +95,7 @@ hr {
 }
 
 pre {
-	font-family: monospace, monospace;
+	font-family: 'Open Sans';
 	font-size: 1em;
 }
 
@@ -127,7 +127,7 @@ strong {
 code,
 kbd,
 samp {
-	font-family: monospace, monospace;
+	font-family: 'Open Sans';
 	font-size: 1em;
 }
 
@@ -183,7 +183,7 @@ input,
 optgroup,
 select,
 textarea {
-	font-family: sans-serif;
+	font-family: 'Open Sans';
 	font-size: 100%;
 	line-height: 1.15;
 	margin: 0;
@@ -417,7 +417,7 @@ input,
 select,
 textarea {
 	color: #333;
-	font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;
+	font-family: 'Open Sans';
 	font-size: 15px;
 	font-size: 0.9375rem;
 	font-weight: 400;
@@ -525,7 +525,7 @@ address {
 
 pre {
 	background: #eee;
-	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-family: 'Open Sans';
 	font-size: 15px;
 	font-size: 0.9375rem;
 	line-height: 1.6;
@@ -539,7 +539,7 @@ code,
 kbd,
 tt,
 var {
-	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font-family: 'Open Sans';
 	font-size: 15px;
 	font-size: 0.9375rem;
 }
@@ -1054,24 +1054,24 @@ input[type="submit"].secondary:focus {
 /* Placeholder text color -- selectors need to be separate to work. */
 ::-webkit-input-placeholder {
 	color: #333;
-	font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;
+	font-family: 'Open Sans';
 }
 
 :-moz-placeholder {
 	color: #333;
-	font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;
+	font-family: 'Open Sans';
 }
 
 ::-moz-placeholder {
 	color: #333;
-	font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;
+	font-family: 'Open Sans';
 	opacity: 1;
 	/* Since FF19 lowers the opacity of the placeholder by default */
 }
 
 :-ms-input-placeholder {
 	color: #333;
-	font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;
+	font-family: 'Open Sans';
 }
 
 /*--------------------------------------------------------------
@@ -1323,7 +1323,7 @@ a:hover .nav-title,
 }
 
 .navigation-top .wrap {
-	max-width: 1000px;
+	max-width: 1170px;
 	padding: 0;
 }
 
@@ -1532,7 +1532,7 @@ body {
 .wrap {
 	margin-left: auto;
 	margin-right: auto;
-	max-width: 700px;
+	max-width: 1170;
 	padding-left: 2em;
 	padding-right: 2em;
 }
@@ -2088,7 +2088,7 @@ body:not(.cwilliams95-front-page) .entry-header {
 .archive.page-one-column:not(.has-sidebar) #primary {
 	margin-left: auto;
 	margin-right: auto;
-	max-width: 740px;
+	max-width: 1170px;
 }
 
 .single-featured-image-header {
@@ -2300,9 +2300,7 @@ body:not(.cwilliams95-front-page) .entry-header {
 13.6 Footer
 --------------------------------------------------------------*/
 
-.site-footer {
-	border-top: 1px solid #eee;
-}
+.site-footer {}
 
 .site-footer .wrap {
 	padding-bottom: 1.5em;
@@ -3293,7 +3291,7 @@ p > object:only-child {
 	}
 
 	.page-one-column .panel-content .wrap {
-		max-width: 740px;
+		max-width: 1170px;
 	}
 
 	.panel-content .entry-header {
@@ -4026,7 +4024,6 @@ p > object:only-child {
 		font-size: 14px;
 		font-size: 0.875rem;
 		line-height: 1.6;
-		margin-top: 3em;
 	}
 
 	.site-footer .widget-column.footer-widget-1 {

@@ -47,7 +47,7 @@ gulp.task('stylesheets', function () {
     //       )
     .pipe(concat('new-york-ave.min.css'))
     .pipe(gulp.dest('css'))
-    .pipe(rename('custom_style.css'))
+    .pipe(rename('custom-style.css'))
     .pipe(gulp.dest(paths.dist));
 });
 

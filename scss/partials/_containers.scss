@@ -1,0 +1,8 @@
+.row-2 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  @include device(smartphone, tablet) {
+    flex-direction: column;
+  }
+}

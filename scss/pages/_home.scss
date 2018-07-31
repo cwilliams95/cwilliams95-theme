@@ -1,0 +1,14 @@
+body.home {
+  main {
+    article {
+      .wrap {
+        ul:nth-child(1) {
+            padding-right: 40px;
+            @include device(smartphone, tablet) {
+              padding-right: 0px;
+            }
+          }
+        }
+      }
+    }
+  }

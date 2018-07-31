@@ -1,8 +1,8 @@
 //Color Palette
-$brand_primary:                #08bbf7;
-$brand_gray_dark:              #414141;
-$brand_gray_light:             #717171;
-$brand_gold:                   #f8b616;
+$brand_primary:                #17313b;
+$brand_gray_dark:              #414f47;
+$brand_gray_light:             #8d9876;
+$brand_secondary:              #866d5c;
 $red:                          #ea5d5d;
 $red_bg:                       rgba($red, 0.95);
 $green:                        #00aa33;
@@ -10,7 +10,7 @@ $green:                        #00aa33;
 //Element Styles
 $feature_area_bg:              rgba(darken($brand_primary, 30%), 0.95);
 $main_bg:                      rgba(white, 0.95);
-$secondary_bg:                 rgba($brand_gold, 0.95);
+$secondary_bg:                 rgba($brand_secondary, 0.95);
 $ternary_bg:                   $main_bg;
 $pre_footer_bg:                rgba($brand_gray_dark, 0.95);
 $dark_gray_bg:                 rgba($brand_gray_dark, 0.5);
@@ -56,7 +56,7 @@ $soundcloud:                   #ff3a00;
 
 //Fonts
 $font_stack:                   "Open Sans", sans-serif;
-$icon_font_family:             "NewYorkAve";
+$icon_font_family:             "FontAwesome";
 $icon_house:                   '\f052';
 $icon_store:                   '\f053';
 $icon_building:                '\f054';
@@ -69,3 +69,5 @@ $icon_shield_medium:           '\f056';
 $icon_search_bold:             '\f05a';
 $icon_laptop_bold:             '\f058';
 $icon_shield_bold:             '\f055';
+$icon_angle_right:             '\f105';
+$icon_check:                   '\f00c';
