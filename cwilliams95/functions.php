@@ -450,8 +450,16 @@ function cwilliams95_scripts() {
 	wp_enqueue_style( 'cwilliams95-custom-style', get_stylesheet_directory_uri().'/custom-style.css' );
 
 	// Font Awesome
+	wp_register_script('scripts-js', get_theme_file_uri('/scripts.min.js'));
+	wp_enqueue_script('scripts-js');
+
+	// Font Awesome
 	wp_register_script('font-awesome', 'https://use.fontawesome.com/d9b68dc2eb.js');
 	wp_enqueue_script('font-awesome');
+
+	// Anime.js (Not what you think)
+	wp_register_script('anime-js', 'https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js');
+	wp_enqueue_script('anime-js');
 
 	// Load the dark colorscheme.
 	if ( 'dark' === get_theme_mod( 'colorscheme', 'light' ) || is_customize_preview() ) {

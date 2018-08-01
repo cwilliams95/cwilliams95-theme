@@ -36,10 +36,15 @@
 		<?php endif; ?>
 
 
-		<div class="header-short" style="background: #999;">
+		<div class="header-short" style="<?php
+			if($post->ID==186){ echo 'background: #866d5c;'; }
+			elseif($post->ID==2){ echo 'background: #17313b;'; }
+			elseif($post->ID==161){ echo 'background: #8d9876;'; }?>">
 			<h1 class="page-title">
 				<span class="text-wrapper">
-					<span class="letters"><?php echo $post->post_title;?>
+					<span class="letters"><?php if($post->ID==186){ echo 'Software Development'; }
+					elseif($post->ID==2){ echo 'Web Development'; }
+					elseif($post->ID==161){ echo 'App Development'; }?>
 					</span>
 				</span>
 			</h1>

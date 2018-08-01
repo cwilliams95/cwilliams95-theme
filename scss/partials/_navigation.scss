@@ -1,4 +1,29 @@
 .navigation-top {
   bottom: unset !important;
+  border: none;
   // padding-top: 32px !important;
+  background: $brand_primary;
+  .wrap {
+    max-width: unset;
+    padding: 0 50px;
+    #top-menu {
+      li {
+        border: none;
+        a {
+          border: none;
+          color: rgba(#FFF, 0.75);
+          transition: color 0.3s ease;
+          padding-left: 0;
+          &:hover {
+            color: #FFF;
+          }
+        }
+        &.current_page_item {
+          a {
+            color: #FFF;
+          }
+        }
+      }
+    }
+  }
 }

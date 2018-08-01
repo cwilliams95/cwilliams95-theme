@@ -35,3 +35,24 @@
     }
   }
 }
+.header-short {
+  margin-top: 49px;
+  padding: 20px 50px;
+  position: relative;
+  .page-title {
+    margin: 0;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    .letters {
+      font-size: 2rem;
+      color: #FFF;
+    }
+    .letter {
+      display: inline-block;
+      line-height:1em;
+      transform-origin: 0 0;
+      opacity: 0;
+    }
+  }
+}

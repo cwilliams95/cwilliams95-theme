@@ -9,11 +9,12 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     htmlrender = require('gulp-htmlrender'),
     htmlmin = require('gulp-htmlmin'),
-    svgmin = require('gulp-svgmin');
+    svgmin = require('gulp-svgmin'),
+    phplint = require('phplint').lint;
 
 var paths = {
   scss: 'scss/**/*.scss',
-  // js: 'js/**/*.js',
+  js: 'js/**/*.js',
   // html: 'html/**/*.html',
   // svg: 'svg/*.svg',
   dist: 'cwilliams95'
@@ -21,7 +22,7 @@ var paths = {
 
 gulp.task('watch', function() {
   gulp.watch(paths.scss, ['stylesheets']);
-  // gulp.watch(paths.js, ['scripts']);
+  gulp.watch(paths.js, ['scripts']);
   // gulp.watch(paths.html, ['html']);
   // gulp.watch(paths.svg, ['svg']);
   // gulp.watch([paths.dist + '/*', '!' + paths.dist + '/*.zip'], ['compress']);
@@ -51,12 +52,12 @@ gulp.task('stylesheets', function () {
     .pipe(gulp.dest(paths.dist));
 });
 
-// gulp.task('scripts', function() {
-//   return gulp.src(paths.js)
-//     .pipe(uglify())
-//     .pipe(concat('scripts.min.js'))
-//     .pipe(gulp.dest(paths.dist));
-// });
+gulp.task('scripts', function() {
+  return gulp.src(paths.js)
+    .pipe(uglify())
+    .pipe(concat('scripts.min.js'))
+    .pipe(gulp.dest(paths.dist));
+});
 //
 // gulp.task('html', function() {
 //   gulp.src('html/*.html')
@@ -85,4 +86,14 @@ gulp.task('stylesheets', function () {
 //   .pipe(gulp.dest(paths.dist));
 // });
 
-gulp.task('default', ['watch', 'stylesheets']);
+gulp.task("phplint", function(cb) {
+  phplint(["cwilliams95/**/*.php"], { limit: 10 }, function(err, stdout, stderr) {
+    if (err) {
+      cb(err);
+      process.exit(1);
+    }
+    cb();
+  });
+});
+gulp.task('phptest', ['phplint']);
+gulp.task('default', ['watch', 'stylesheets', 'scripts']);
