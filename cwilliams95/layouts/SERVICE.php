@@ -10,8 +10,38 @@
  * @since 1.0
  * @version 1.0
  */
-
+global $post;
 get_header('short'); ?>
+
+<!-- Start zig zag -->
+	<div id="zig-zag">
+		<?php if(get_field('service-zigzag-1')) { ?>
+		<div class="row <?php echo $post->post_name; ?>">
+			<div class="content"><p><?php the_field('service-zigzag-1'); ?></p></div>
+			<?php if(get_field('service-zigzag-image-1')) {?>
+				<div class="image"><?php echo wp_get_attachment_image(get_field('service-zigzag-image-1'), 'full')?></div>
+			<?php } ?>
+		</div>
+		<?php } ?>
+
+	<?php if(get_field('service-zigzag-2')) { ?>
+	<div class="row reverse <?php echo $post->post_name; ?>">
+		<div class="content"><p><?php the_field('service-zigzag-2'); ?></p></div>
+		<?php if(get_field('service-zigzag-image-2')) {?>
+			<div class="image"><?php echo wp_get_attachment_image(get_field('service-zigzag-image-2'), 'full')?></div>
+		<?php } ?>
+	</div>
+	<?php } ?>
+
+	<?php if(get_field('service-zigzag-3')) { ?>
+	<div class="row <?php echo $post->post_name; ?>">
+		<div class="content"><p><?php the_field('service-zigzag-3'); ?></p></div>
+		<?php if(get_field('service-zigzag-image-3')) {?>
+			<div class="image"><?php echo wp_get_attachment_image(get_field('service-zigzag-image-3'), 'full')?></div>
+		<?php } ?>
+	</div>
+	<?php } ?>
+</div>
 
 <div class="wrap">
 	<div id="primary" class="content-area">
@@ -31,11 +61,7 @@ get_header('short'); ?>
 			endwhile; // End of the loop.
 			?>
 
-			<div id="side-project">
-				<div class="project-title">
-					<h2>SOE Unity Game Prototype </h2>
-				</div>
-			</div>
+
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

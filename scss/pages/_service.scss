@@ -1,0 +1,65 @@
+.page-template-SERVICE {
+  #zig-zag {
+    padding-bottom: 75px;
+    .row {
+      position: relative;
+      padding: 50px 0;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      &.reverse {
+        flex-direction: row-reverse;
+      }
+      &.web {
+        background-color: lighten($brand_primary, 50%);
+        background-image: linear-gradient(65deg, lighten($brand_primary, 50%) 50%, #FFF 50%);
+        &.reverse {
+          background-image: linear-gradient(65deg, #FFF 50%, lighten($brand_primary, 50%) 50%);
+        }
+        .content h1 { color: $brand_primary; }
+      }
+      &.apps {
+        background-color: lighten($brand_gray_light, 40%);
+        background-image: linear-gradient(65deg, lighten($brand_gray_light, 40%) 50%, #FFF 50%);
+        &.reverse {
+          background-image: linear-gradient(65deg, #FFF 50%, lighten($brand_gray_light, 40%) 50%);
+        }
+        .content h1 { color: $brand_gray_light; }
+      }
+      &.software {
+        background-color: lighten($brand_secondary, 50%);
+        background-image: linear-gradient(65deg, lighten($brand_secondary, 50%) 50%, #FFF 50%);
+        &.reverse {
+          background-image: linear-gradient(65deg, #FFF 50%, lighten($brand_secondary, 50%) 50%);
+        }
+        .content h1 { color: $brand_secondary; }
+      }
+      .content {
+        width: 50%;
+        justify-content:  center;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        min-height: 525px;
+        font-size: 1.5rem;
+        padding: 60px;
+        @include device(smartphone, tablet) {min-height: unset;}
+        h1 {
+          font-size: 1.8rem;
+        }
+      }
+      .image {
+        width: 50%;
+        overflow: hidden;
+        max-height: 600px;
+        display: flex;
+        align-items: center;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}

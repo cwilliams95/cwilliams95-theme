@@ -15,3 +15,6 @@ function initTitleAnim() {
       }
     });
 }
+function initProfileAnim() {
+  jQuery('.profile-wrap .headshot img').css('transform', 'scale(1)');
+}

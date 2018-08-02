@@ -6,8 +6,9 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 103px;
-    padding: 0 50px;
+    padding-top: 103px !important;
+    padding: 40px 50px;
+    background: #363b3e;
     .headshot {
       position: relative;
       height: 0px;
@@ -21,9 +22,12 @@
         height: auto;
         min-width: 250px;
         min-height: 250px;
+        transition: all 0.5s ease-out;
+        transform: scale(0);
       }
     }
     .profile-content {
+      color: #FFF;
       width: auto;
       max-width: 700px;
       padding: 50px;
@@ -31,6 +35,12 @@
       font-size: 1.3rem;
       @include device(smartphone, tablet) {
         padding-left: 0;
+      }
+      a {
+        color: lighten($brand_primary, 30%);
+        &:hover {
+          color: lighten($brand_primary, 15%);
+        }
       }
     }
   }

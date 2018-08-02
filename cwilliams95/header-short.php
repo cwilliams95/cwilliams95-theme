@@ -38,7 +38,7 @@
 
 		<div class="header-short" style="<?php
 			if($post->ID==186){ echo 'background: #866d5c;'; }
-			elseif($post->ID==2){ echo 'background: #17313b;'; }
+			elseif($post->ID==2){ echo 'background: #4c7e92;'; }
 			elseif($post->ID==161){ echo 'background: #8d9876;'; }?>">
 			<h1 class="page-title">
 				<span class="text-wrapper">
